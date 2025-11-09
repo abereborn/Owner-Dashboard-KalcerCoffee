@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KalcerCoffee-Owner</title>
+    <link rel="stylesheet" href="datapegawai.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="head">
+      <h1>Dashboard</h1>
+      <div class="content">
+        <h1>Kalcer<span>Coffee.</span></h1>
+      </div>
+      <div class="log">
+        <button id="logoutBtn" class="logout-header">
+          <p>Logout</p>
+          <i class="fa-solid fa-power-off"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Sidebar -->
+    <nav class="sidebar">
+      <ul class="sidebar-links">
+        <a href="/Owner Page/owner.html"><i class="fa-solid fa-chart-simple"></i> Dashboard Utama</a>
+        <a href="#"><i class="fa-solid fa-users"></i>Data Pegawai</a>
+        <a href="/Owner Page/Kehadiran Pegawai/kehadiran.html"><i class="fa-solid fa-semibold fa-clock"></i>Kehadiran Pegawai</a>
+        <a href="/Owner Page/Stock/stock.html"><i class="fa-solid fa-mug-hot"></i>Stock & Bahan Baku</a>
+        <a href="/Owner Page/Penjualan/penjualan.html"><i class="fa-solid fa-dollar-sign"></i>Penjualan / Laporan</a>
+      </ul>
+    </nav>
+
+    <!-- Isi Content -->
+    <main class="main-content">
+      <div class="title">
+        <h1>Data Pegawai:</h1>
+      </div>
+
+      <div class="content">
+        <section class="container">
+          <!-- Tabel Data Pegawai -->
+          <div class="table-container">
+            <h3>Daftar Pegawai (Full-time) Kalcer Coffee</h3>
+            <table class="pegawai-table">
+              <thead>
+                <tr>
+                  <th>No</th>
+                  <th>Nama Pegawai</th>
+                  <th>Jabatan</th>
+                  <th>Umur</th>
+                  <th>Domisili</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Rizky Andika</td>
+                  <td>Barista</td>
+                  <td>22 Tahun</td>
+                  <td>Tangerang</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Sinta Lestari</td>
+                  <td>Kasir</td>
+                  <td>23 Tahun</td>
+                  <td>Jakarta</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Agung Pratama</td>
+                  <td>Chef</td>
+                  <td>25 Tahun</td>
+                  <td>Jakarta</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>Rara Wulandari</td>
+                  <td>Waitress</td>
+                  <td>22 Tahun</td>
+                  <td>Tangerang</td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>Bima Santoso</td>
+                  <td>Barista</td>
+                  <td>24 Tahun</td>
+                  <td>Jakarta</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </div>
+
+      <div class="content">
+        <section class="container">
+          <!-- Tabel Data Pegawai -->
+          <div class="table-container">
+            <h3>Daftar Pegawai (Part-Time) Kalcer Coffee</h3>
+            <table class="pegawai-table">
+              <thead>
+                <tr>
+                  <th>No</th>
+                  <th>Nama Pegawai</th>
+                  <th>Jabatan</th>
+                  <th>Umur</th>
+                  <th>Domisili</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Rikza Muktafa</td>
+                  <td>Barista</td>
+                  <td>19 Tahun</td>
+                  <td>Jakarta</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Ega Kamal Alfauzan</td>
+                  <td>WareHouse</td>
+                  <td>19 Tahun</td>
+                  <td>Jawa</td>
+                  <td></td>
+                </tr>
+
+                <tr>
+                  <td>3</td>
+                  <td>Saiful Lubis</td>
+                  <td>Chef</td>
+                  <td>23 Tahun</td>
+                  <td>Jakarta</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>Affan Baihaqi</td>
+                  <td>Waitress</td>
+                  <td>19 Tahun</td>
+                  <td>Tangerang</td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>Abu Caesar</td>
+                  <td>Barista</td>
+                  <td>21 Tahun</td>
+                  <td>Jakarta</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </div>
+    </main>
+    <!-- Pop Up Konfirmasi -->
+    <div id="logoutPopup" class="popup-overlay">
+      <div class="popup-content">
+        <h3>Konfirmasi Logout</h3>
+        <p>Apakah kamu yakin ingin logout dari Dashboard Kalcer Coffee?</p>
+        <div class="popup-actions">
+          <button id="confirmLogout" class="btn-confirm">Ya, Logout</button>
+          <button id="cancelLogout" class="btn-cancel">Batal</button>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

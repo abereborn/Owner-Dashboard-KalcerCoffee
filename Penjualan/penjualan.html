@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KalcerCoffee-Owner</title>
+    <link rel="stylesheet" href="penjualan.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="head">
+      <h1>Dashboard</h1>
+      <div class="content">
+        <h1>Kalcer<span>Coffee.</span></h1>
+      </div>
+      <div class="log">
+        <button id="logoutBtn" class="logout-header">
+          <p>Logout</p>
+          <i class="fa-solid fa-power-off"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Sidebar -->
+    <nav class="sidebar">
+      <ul class="sidebar-links">
+        <a href="../owner.html"><i class="fa-solid fa-chart-simple"></i> Dashboard Utama</a>
+        <a href="../Data Pegawai/datapegawai.html"><i class="fa-solid fa-users"></i>Data Pegawai</a>
+        <a href="../Kehadiran Pegawai/kehadiran.html"><i class="fa-solid fa-semibold fa-clock"></i>Kehadiran Pegawai</a>
+        <a href="../Stock/stock.html"><i class="fa-solid fa-mug-hot"></i>Stock & Bahan Baku</a>
+        <a href="#"><i class="fa-solid fa-dollar-sign"></i>Penjualan / Laporan</a>
+      </ul>
+    </nav>
+
+    <!-- Isi Content -->
+    <main class="main-content">
+      <div class="title">
+        <h1>Laporan Penjualan Kalcer Coffee</h1>
+      </div>
+
+      <!-- Ringkasan Penjualan -->
+      <section class="sales-summary">
+        <div class="card">
+          <h3>Total Penjualan Hari Ini</h3>
+          <p id="salesToday">Rp 2.450.000</p>
+        </div>
+        <div class="card">
+          <h3>Total Transaksi</h3>
+          <p id="totalTransactions">38 Transaksi</p>
+        </div>
+        <div class="card">
+          <h3>Menu Terlaris</h3>
+          <p id="bestSeller">Caramel Latte</p>
+        </div>
+        <div class="card">
+          <h3>Total Penjualan Bulan Ini</h3>
+          <p id="salesMonth">Rp 48.750.000</p>
+        </div>
+      </section>
+
+      <!-- Grafik Penjualan Bulanan -->
+      <section class="chart-section">
+        <h3>Grafik Penjualan Bulanan</h3>
+        <canvas id="salesChart"></canvas>
+      </section>
+
+      <!-- Bagian Laporan Penjualan Per Menu -->
+      <section class="menu-sales-section">
+        <h2 class="menu-sales-title">Laporan Penjualan per Menu</h2>
+
+        <div class="menu-sales-grid">
+          <div class="menu-card">
+            <h3>Caramel Latte</h3>
+            <p class="menu-qty">Terjual: <span>120 Cup</span></p>
+            <p class="menu-income">Pendapatan: <span>Rp 6.000.000</span></p>
+          </div>
+
+          <div class="menu-card">
+            <h3>Espresso</h3>
+            <p class="menu-qty">Terjual: <span>95 Cup</span></p>
+            <p class="menu-income">Pendapatan: <span>Rp 4.275.000</span></p>
+          </div>
+
+          <div class="menu-card">
+            <h3>Cappuccino</h3>
+            <p class="menu-qty">Terjual: <span>88 Cup</span></p>
+            <p class="menu-income">Pendapatan: <span>Rp 3.960.000</span></p>
+          </div>
+
+          <div class="menu-card">
+            <h3>Matcha Latte</h3>
+            <p class="menu-qty">Terjual: <span>74 Cup</span></p>
+            <p class="menu-income">Pendapatan: <span>Rp 3.330.000</span></p>
+          </div>
+
+          <div class="menu-card">
+            <h3>Vanilla Frappe</h3>
+            <p class="menu-qty">Terjual: <span>60 Cup</span></p>
+            <p class="menu-income">Pendapatan: <span>Rp 2.700.000</span></p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Pop Up Konfirmasi -->
+    <div id="logoutPopup" class="popup-overlay">
+      <div class="popup-content">
+        <h3>Konfirmasi Logout</h3>
+        <p>Apakah kamu yakin ingin logout dari Dashboard Kalcer Coffee?</p>
+        <div class="popup-actions">
+          <button id="confirmLogout" class="btn-confirm">Ya, Logout</button>
+          <button id="cancelLogout" class="btn-cancel">Batal</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

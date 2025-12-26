@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>KalcerCoffee-Owner</title>
-    <link rel="stylesheet" href="stock.css" />
+    <link rel="stylesheet" href="style.css" />
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" rel="stylesheet" />
   </head>
@@ -25,10 +25,10 @@
     <!-- Sidebar -->
     <nav class="sidebar">
       <ul class="sidebar-links">
-        <a href="../Dashboard/dashboard.html"><i class="fa-solid fa-chart-simple"></i> Dashboard Utama</a>
+        <a href="#"><i class="fa-solid fa-chart-simple"></i> Dashboard Utama</a>
         <a href="../Data Pegawai/datapegawai.html"><i class="fa-solid fa-users"></i>Data Pegawai</a>
         <a href="../Kehadiran Pegawai/kehadiran.html"><i class="fa-solid fa-semibold fa-clock"></i>Kehadiran Pegawai</a>
-        <a href="#"><i class="fa-solid fa-mug-hot"></i>Stock & Bahan Baku</a>
+        <a href="../Stock/stock.html"><i class="fa-solid fa-mug-hot"></i>Stock & Bahan Baku</a>
         <a href="../Penjualan/penjualan.html"><i class="fa-solid fa-dollar-sign"></i>Penjualan / Laporan</a>
       </ul>
     </nav>
@@ -36,53 +36,38 @@
     <!-- Isi Content -->
     <main class="main-content">
       <div class="title">
-        <h1>Stock & Bahan Baku:</h1>
+        <h1>Ringkasan Cepat</h1>
       </div>
-
-      <div class="content container">
-        <!-- Pilihan Tanggal Update -->
-        <div class="date-selector">
-          <button id="prevStockDate">←</button>
-          <input type="date" id="stockDate" value="2025-10-16" />
-          <button id="nextStockDate">→</button>
-        </div>
-
-        <!-- Tabel Data Stock -->
-        <div class="table-container">
-          <h3 id="stockTitle">Daftar Stock & Bahan Baku Kalcer Coffee (16 Oktober 2025)</h3>
-          <table class="pegawai-table">
-            <thead>
-              <tr>
-                <th>No</th>
-                <th>Nama Bahan</th>
-                <th>Satuan</th>
-                <th>Stok Tersisa</th>
-                <th>Kondisi</th>
-              </tr>
-            </thead>
-            <tbody id="stockBody">
-              <!-- Data akan diisi otomatis dari JS -->
-            </tbody>
-          </table>
-        </div>
-
-        <!-- Ringkasan -->
-        <div class="summary">
+      <div class="chart-container">
+        <h3>Statistik Pemasukan Bulanan</h3>
+        <canvas id="incomeChart"></canvas>
+      </div>
+      <div class="content">
+        <section class="container">
           <div class="card">
-            <h3>Total Jenis Bahan</h3>
-            <p id="totalBahan">0 Jenis</p>
+            <h3>Total Pemasukan</h3>
+            <p>Rp 12.450.000</p>
           </div>
           <div class="card">
-            <h3>Bahan Aman</h3>
-            <p id="amanCount">0 Jenis</p>
+            <h3>Total Pengeluaran</h3>
+            <p>Rp 5.000.000</p>
           </div>
           <div class="card">
-            <h3>Perlu Restock</h3>
-            <p id="restockCount">0 Jenis</p>
+            <h3>Jumlah Pegawai</h3>
+            <p>8 Orang</p>
           </div>
-        </div>
+          <div class="card">
+            <h3>Kehadiran Hari Ini</h3>
+            <p>6 Orang Hadir<br />2 Orang Izin</p>
+          </div>
+          <div class="card">
+            <h3>Stok Kopi</h3>
+            <p>Masih aman (32 kg)</p>
+          </div>
+        </section>
       </div>
     </main>
+
     <!-- Pop Up Konfirmasi -->
     <div id="logoutPopup" class="popup-overlay">
       <div class="popup-content">
@@ -94,6 +79,7 @@
         </div>
       </div>
     </div>
+
     <script src="script.js"></script>
   </body>
 </html>

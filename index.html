@@ -3,79 +3,81 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>KalcerCoffee-Owner</title>
+    <title>Login</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" rel="stylesheet" />
   </head>
+
   <body>
-    <div class="head">
-      <h1>Dashboard</h1>
-      <div class="content">
-        <h1>Kalcer<span>Coffee.</span></h1>
-      </div>
-      <div class="log">
-        <button id="logoutBtn" class="logout-header">
-          <p>Logout</p>
-          <i class="fa-solid fa-power-off"></i>
-        </button>
-      </div>
-    </div>
-
-    <!-- Sidebar -->
-    <nav class="sidebar">
-      <ul class="sidebar-links">
-        <a href="#"><i class="fa-solid fa-chart-simple"></i> Dashboard Utama</a>
-        <a href="Data Pegawai/datapegawai.html"><i class="fa-solid fa-users"></i>Data Pegawai</a>
-        <a href="Kehadiran Pegawai/kehadiran.html"><i class="fa-solid fa-semibold fa-clock"></i>Kehadiran Pegawai</a>
-        <a href="Stock/stock.html"><i class="fa-solid fa-mug-hot"></i>Stock & Bahan Baku</a>
-        <a href="Penjualan/penjualan.html"><i class="fa-solid fa-dollar-sign"></i>Penjualan / Laporan</a>
-      </ul>
-    </nav>
-
-    <!-- Isi Content -->
-    <main class="main-content">
-      <div class="title">
-        <h1>Ringkasan Cepat</h1>
-      </div>
-      <div class="chart-container">
-        <h3>Statistik Pemasukan Bulanan</h3>
-        <canvas id="incomeChart"></canvas>
-      </div>
-      <div class="content">
-        <section class="container">
-          <div class="card">
-            <h3>Total Pemasukan</h3>
-            <p>Rp 12.450.000</p>
+    <div class="container">
+      <!-- Login -->
+      <div class="form-box login">
+        <form id="loginForm">
+          <div class="close-icon login">
+            <a href="#"><i class="fa-solid fa-circle-xmark"></i></a>
           </div>
-          <div class="card">
-            <h3>Total Pengeluaran</h3>
-            <p>Rp 5.000.000</p>
+          <h1>Login</h1>
+          <div class="input-box">
+            <input type="text" placeholder="Username" required />
+            <i class="fa-solid fa-user"></i>
           </div>
-          <div class="card">
-            <h3>Jumlah Pegawai</h3>
-            <p>8 Orang</p>
+          <div class="input-box">
+            <input type="password" placeholder="Password" required />
+            <i class="fa-solid fa-lock"></i>
           </div>
-          <div class="card">
-            <h3>Kehadiran Hari Ini</h3>
-            <p>6 Orang Hadir<br />2 Orang Izin</p>
+          <div class="forgot-link">
+            <a href="#">Forgot Password?</a>
           </div>
-          <div class="card">
-            <h3>Stok Kopi</h3>
-            <p>Masih aman (32 kg)</p>
+          <button type="submit" class="btn">Login</button>
+          <p>or login with social platforms</p>
+          <div class="social-icons">
+            <a href="#"><i class="fa-brands fa-google"></i></a>
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-apple"></i></a>
           </div>
-        </section>
+        </form>
       </div>
-    </main>
-
-    <!-- Pop Up Konfirmasi -->
-    <div id="logoutPopup" class="popup-overlay">
-      <div class="popup-content">
-        <h3>Konfirmasi Logout</h3>
-        <p>Apakah kamu yakin ingin logout dari Dashboard Kalcer Coffee?</p>
-        <div class="popup-actions">
-          <button id="confirmLogout" class="btn-confirm">Ya, Logout</button>
-          <button id="cancelLogout" class="btn-cancel">Batal</button>
+      <!-- Registrasi -->
+      <div class="form-box register">
+        <form action="">
+          <div class="close-icon register">
+            <a href="../index.html"><i class="fa-solid fa-circle-xmark"></i></a>
+          </div>
+          <h1>Registraction</h1>
+          <div class="input-box">
+            <input type="text" placeholder="Username" required />
+            <i class="fa-solid fa-user"></i>
+          </div>
+          <div class="input-box">
+            <input type="email" placeholder="Email" required />
+            <i class="fa-solid fa-envelope"></i>
+          </div>
+          <div class="input-box">
+            <input type="password" placeholder="Password" required />
+            <i class="fa-solid fa-lock"></i>
+          </div>
+          <button type="submit" class="btn">Register</button>
+          <p>or register with social platforms</p>
+          <div class="social-icons">
+            <a href="#"><i class="fa-brands fa-google"></i></a>
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-apple"></i></a>
+          </div>
+        </form>
+      </div>
+      <!-- Toggle Pindah-Pindahnya -->
+      <div class="toggle-box">
+        <div class="toggle-panel toggle-left">
+          <h1>Hello, Welcome!</h1>
+          <p>Dont have an account?</p>
+          <button class="btn register-btn">Register</button>
+        </div>
+        <div class="toggle-panel toggle-right">
+          <h1>Welcome Back!</h1>
+          <p>Already have an account?</p>
+          <button class="btn login-btn">Login</button>
         </div>
       </div>
     </div>

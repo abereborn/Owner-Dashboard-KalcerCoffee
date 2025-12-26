@@ -68,6 +68,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   confirmLogout.addEventListener("click", () => {
-    window.location.href = "/Login Page/index.html";
+    window.location.href = "../index.html";
   });
 });
